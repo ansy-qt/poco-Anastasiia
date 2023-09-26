@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="thick-line"></div>
+        <h1>Profil</h1>
+        <p><strong>Hier können Sie Ihre Adress-Angaben einsehen und anpassen.</strong></p>
+        <hr>
+        <h2>Persönliche Daten</h2>
+        <form>
+            <label for="titel">Titel</label>
+            <input type="text" id="titel" name="titel" placeholder="Dr."><br>
+            <label for="fname">Vorname</label>
+            <input type="text" id="fname" name="fname" placeholder="John"><br>
+            <label for="lname">Nachname</label>
+            <input type="text" id="lname" name="lname" placeholder="Doe"><br><br>
+            <label for="gender">Geschlecht</label>
+            <div id="gender">               
+                <div>
+                    <input type="radio" id="m" name="gender" value="male" checked />
+                    <label for="m">M</label>
+                    <input type="radio" id="f" name="gender" value="female" />
+                    <label for="f">F</label>
+                  </div>
+            </div><br>
+            <label for="sprache">Sprache</label>
+              <div>
+                <input type="radio" id="DE" name="sprache" value="de" checked />
+                <label for="DE">DE</label>
+              
+            
+             
+                <input type="radio" id="FR" name="sprache" value="fr" />
+                <label for="FR">FR</label>
+             
+            
+        
+                <input type="radio" id="IT" name="sprache" value="it" />
+                <label for="IT">IT</label>
+              </div><br>
+
+            <hr>
+            <h2>Kontaktdaten</h2>
+
+            <label for="tel">Telefon</label>
+            <input type="tel" id="tel" name="tel" required><i class="bi bi-x-circle-fill"></i><br>
+            <label for="mobile">Mobile</label>
+            <input type="tel" id="mobile" name="mobile" placeholder="optional"><br>
+            <label for="hauptnummer">Hauptnummer</label>
+            <input type="tel" id="hauptnummer" name="hauptnummer" placeholder="optional"><br>
+            <label for="fax">Fax</label>
+            <input type="tel" id="fax" name="fax" placeholder="optional"><br>
+            <label for="email">Mail 1</label>
+            <input type="email" id="email" name="email" required>
+            <i class="bi bi-x-circle-fill"></i><br>
+            <label for="email2">Mail 2</label>
+            <input type="email" id="email2" name="email2" placeholder="optional"><br>
+
+            <hr>
+            <h2>Adressdaten</h2>
+
+            <label for="firma">Firma</label>
+            <input type="text" id="firma" name="firma" required><i class="bi bi-x-circle-fill"></i><br>
+            <label for="zfirma">Zusatz Firma</label>
+            <input type="text" id="zfirma" name="zfirma" placeholder="optional"><br>
+            <label for="homepage">Homepage</label>
+            <input type="text" id="homepage" name="homepage" placeholder="optional"><br>
+            <label for="address">Addresse/Haus Nr</label>
+            <input type="text" id="address" name="address" placeholder="optional"><br>
+            <label for="zaddress">Zusatz Addresse</label>
+            <input type="text" id="zaddress" name="zaddress" placeholder="optional"><br>
+            <label for="postfach">Postfach</label>
+            <input type="text" id="postfach" name="postfach" placeholder="optional"><br>
+            <label for="ort">PLZ/Ort</label>
+            <input type="text" id="ort" name="ort" placeholder="8800 Musterstadt"><br>
+            <label for="kanton" required>Kanton/Land</label>
+            <input type="text" id="kanton" name="kanton" placeholder="ZH Sweiz" required><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>
