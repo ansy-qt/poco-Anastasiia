@@ -1,0 +1,47 @@
+html,
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+h1::before {
+    background: #000000;
+    content: "";
+    display: block;
+    height: 10px;
+    width: 50px;
+}
+
+fieldset {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 200px 1fr;
+    align-items: baseline;
+}
+
+label {
+    margin: 1rem 0 0.25rem;
+}
+
+#cc {
+    order: 0;
+}
+
+[for="cc"] {
+    order: 1;
+}
+
+#twint {
+    order: 2;
+}
+
+[for="twint"] {
+    order: 3;
+}

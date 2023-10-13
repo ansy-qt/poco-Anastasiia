@@ -1,0 +1,84 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "f1 f2 f3"
+        "signup signup signup"
+        "content content content";
+    gap: 20px;
+    padding: 20px;
+}
+
+.header, .signup, .content, .f1, .f2, .f3 {
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.header {
+    grid-area: header;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    text-align: center;
+    color: white;
+}
+
+.f1 {
+    grid-area: f1;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    height: 60px;
+}
+
+.f2 {
+    grid-area: f2;
+    background: linear-gradient(to right, #f26267, #e66946);
+}
+
+.f3 {
+    grid-area: f3;
+    background: linear-gradient(to right, #4487a9, #2b2079);
+}
+
+.signup {
+    grid-area: signup;
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+}
+
+.content {
+    grid-area: content;
+    background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+}
+
+
+@media screen and (max-width: 1024px) {
+    .container {
+        grid-template-areas:
+            "header header "
+            "content content "
+            "signup f1 "
+            "f2 f3";
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-areas:
+            "header"
+            "content"
+            "signup"
+            "f1"
+            "f2"
+            "f3";
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+}
