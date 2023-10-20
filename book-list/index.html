@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <style>
+        .li {
+            margin-top: 15px;
+        }
+
+        .style {
+            display: block;
+            width: 150px;
+            margin-top: 10px;
+        }
+        
+          .read {
+            font-style: italic;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My Book List</h1>
+    <ul id="bookList"></ul>
+
+    <script>
+        var books = [
+            {
+                title: 'The Design of EveryDay Things',
+                author: 'Don Norman',
+                alreadyRead: false,
+                coverURL: 'https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/349/original/840.jpg?1697788052'
+            }, {
+                title: 'The Most Human Human',
+                author: 'Brian Christian',
+                alreadyRead: true,
+                coverURL: 'https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/348/original/10814191.jpg?1697788044'
+            }
+        ];
+
+
+        let bookList = document.getElementById('bookList');
+
+        books.forEach(function (book) {
+            let li = document.createElement('li');
+            li.classList.add('li');
+            let text = book.title + ' by ' + book.author;
+            li.textContent = text;
+
+            
+            let img = document.createElement('img');
+            img.src = book.coverURL;
+            img.alt = book.title + ' Cover Image';
+            img.classList.add('style');
+            li.appendChild(img);
+
+            if (book.alreadyRead) {
+                li.classList.add('read');
+            }
+
+            bookList.appendChild(li);
+        });
+    </script>
+</body>
+
+</html>

@@ -77,6 +77,7 @@ class Food {
     }
 }
 
+
 let apple = new Food(300, ["B12", "C"], "Apple", ["nuts"], true, "2023-10-18", 1.90);
 console.table(apple);
 console.log(`Is my ${apple.name} still edible?`);
